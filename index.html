@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+<script src="scripts.js" type='text/javascript'> </script>
+<body>
+  <nav id="leftSideNav">
+    <ul>
+      <li onclick="showTable('myBooksTable')" id="myBooksTable" class="li"><i class="fas fa-book"></i>  Moje knihy</li>
+      <li onclick="showTable('wishListTable')" id="wishListTable" class="li"><i class="fas fa-bookmark"></i>  Knižný zoznam prianí</li>
+      <li></li>
+    </ul>
+  </nav>
+
+  <article>
+    <section id="searachBar">
+      <input type="text" id="input" name="firstname" placeholder="Vyhľadávanie" oninput="search()">
+    </section>
+
+    <section>
+      <ul id="tools">
+        <li>Názov knihy <i class="fas fa-sort-alpha-up" id="A" onclick="bookUp()"></i> <i class="fas fa-sort-alpha-down" id="C" onclick="bookDown()"></i>  </li>
+        <li>Meno autora <i class="fas fa-sort-alpha-up" id="B" onclick="authorUp()"></i> <i class="fas fa-sort-alpha-down" id="D" onclick="authorDown()"></i></li>
+      </ul>
+      <ul class="right">
+        <li><a href="https://goo.gl/forms/L5uVJootLC5t2s4D3"><i class="fas fa-plus"></i> Pridať knihu</a></li>
+        <li><a href="https://goo.gl/forms/GpJOzfmQ5qvszgGK2"><i class="fas fa-plus"></i> Pridať do wishlistu</a></li>
+      </ul>
+    </section>
+
+      <table id="myTable"></table>
+
+</article>
+</body>
+</html>
+
